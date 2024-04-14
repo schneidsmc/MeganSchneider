@@ -31,3 +31,17 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll("[data-img-to-show]").forEach(section => {
   observer.observe(section)
 })
+
+window.onscroll = function() {stickyNav()};
+
+var navbar = document.getElementById('navbar');
+var sticky = navbar.offsetTop;
+console.log(sticky)
+
+function stickyNav() {
+    if(window.pageYOffset >= sticky){
+        navbar.classList.add('sticky')
+    } else {
+        navbar.classList.remove('sticky')
+    }
+}
