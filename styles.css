@@ -9,11 +9,15 @@ body {
   color: #141616;
   background-color: #e6e9ea;
   font-size: 28px;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-  font-size: 110px;
-  margin-bottom: 1rem;
+  font-size: 90px;
+  margin-bottom: .2rem;
+}
+p {
+  margin: 10px
 }
 
 .full-screen-section {
@@ -23,12 +27,13 @@ h1 {
   position: relative;
 }
 
-.top-section .left,
-.top-section .right {
+.top-section .left {
+/* .top-section .right { */
   flex-basis: 0;
   flex-grow: 1;
+  text-align: center;
   padding: 1rem;
-  padding-left: 3rem;
+  /* padding-left: 3rem; */
 }
 
 .top-section {
@@ -149,4 +154,39 @@ h1 {
 [data-img-to-show] {
   position: absolute;
   top: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Styles for each card item */
+.card-item {
+  background-color: #f0f0f0; /* Example background color for card items */
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#cardHeader {
+  font-size: 25px;
+  text-decoration: solid;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 0,
+  'opsz' 24
 }
