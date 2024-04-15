@@ -93,9 +93,7 @@ p {
   padding-left: 20px
 }
 
-.dropdown {
-  float: left;
-}
+
 .dropbtn {
   font-size: 16px;
   border:none;
@@ -105,28 +103,30 @@ p {
   cursor: pointer;
   padding: 14px 16px 
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  z-index: 1000;
-  background-color: red;
+.dropbtn:hover .dropbtn:focus {
+  background-color: #2980B9;
 }
-
-.dropdown-content.show{
-  display:block;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
-  display: none;
+  display: block;
+  /* z-index: 1000; */
 }
-
-.dropdown:hover .dropdown-content {
+.dropdown-content a:hover {
+  background-color: #333;
+}
+.show {
   display: block;
 }
+
+
+
+
 
 
 
@@ -206,28 +206,6 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.profCardItem {
-  width: calc(20.33% - 20px); /* Adjust the width as needed */
-  /* margin: 10px; */
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-
-.profPic {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px; /* Optional: Add border radius to images */
-}
-
-
-
-
-/* idk */
-
-
 
 .card {
   display: flex;

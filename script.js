@@ -5,7 +5,7 @@ function setScrollVar() {
   const htmlElement = document.documentElement
   const percentOfScreenHeightScrolled =
     htmlElement.scrollTop / htmlElement.clientHeight
-  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
+  // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
   htmlElement.style.setProperty(
     "--scroll",
     Math.min(percentOfScreenHeightScrolled * 100, 100)
@@ -46,17 +46,18 @@ function stickyNav() {
     }
 }
 
-// JavaScript for dropdown menu
-document.addEventListener("DOMContentLoaded", function() {
-  const dropdownBtn = document.querySelector(".dropbtn");
-  const dropdownContent = document.querySelector(".dropdown-content");
-
-  console.log(dropdownBtn); // Check if dropdownBtn is correctly selected
-  console.log(dropdownContent); // Check if dropdownContent is correctly selected
-
-  dropdownBtn.addEventListener("click", function() {
-    console.log("Dropdown button clicked"); // Check if click event is triggered
-    dropdownContent.classList.toggle("show");
-    console.log(dropdownContent.classList.contains("show")); // Check if class is toggled
-  });
-});
+function myFunction() {
+  var dropDownContent = document.getElementById("myDropdown")
+  dropDownContent.classList.toggle("show")
+}
+window.onclick = function(event) {
+  if(!event.target.matches('.dropbtn')){
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++){
+      var openDropdown = dropdowns[i];
+      if(openDropdown.classList.contains('show')){
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
