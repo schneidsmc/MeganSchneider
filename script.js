@@ -45,3 +45,18 @@ function stickyNav() {
         navbar.classList.remove('sticky')
     }
 }
+
+// JavaScript for dropdown menu
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownBtn = document.querySelector(".dropbtn");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  console.log(dropdownBtn); // Check if dropdownBtn is correctly selected
+  console.log(dropdownContent); // Check if dropdownContent is correctly selected
+
+  dropdownBtn.addEventListener("click", function() {
+    console.log("Dropdown button clicked"); // Check if click event is triggered
+    dropdownContent.classList.toggle("show");
+    console.log(dropdownContent.classList.contains("show")); // Check if class is toggled
+  });
+});
