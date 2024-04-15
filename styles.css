@@ -110,7 +110,7 @@ p {
   position: absolute;
   background-color: #333;
   min-width: 160px;
-  z-index: 2;
+  z-index: 1000;
   background-color: red;
 }
 
@@ -153,6 +153,9 @@ p {
   #desc {
     display: none;
   }
+  #aboutmeDesc{
+    font-size: 15px;
+  }
   .imgs > .top-section-img {
     width: 100vw;
   }
@@ -192,6 +195,39 @@ p {
   position: absolute;
   top: 50%;
 }
+
+/* IDK */
+.Profilecard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Adjust spacing between cards */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profCardItem {
+  width: calc(20.33% - 20px); /* Adjust the width as needed */
+  /* margin: 10px; */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+.profPic {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Add border radius to images */
+}
+
+
+
+
+/* idk */
+
+
 
 .card {
   display: flex;
